@@ -1,0 +1,198 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #2f3035;
+  background-image: url("./images/background-adare-restaurant.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mobile{
+    display: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+p,
+h1,
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+input{
+    display: none;
+}
+
+nav {
+  background-color: #0000004d;
+  align-self: stretch;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  text-transform: uppercase;
+  list-style: none;
+  padding: 15px;
+}
+
+li a {
+  text-transform: uppercase;
+  font-size: 0.85em;
+  padding-bottom: 13px;
+  border-bottom: 1px solid transparent;
+}
+
+li a:hover, main p a {
+    border-bottom: 1px solid #ffffff;
+}
+
+main {
+  color: #ffffff;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  /* margin-bottom: 150px; */
+}
+
+main h1 {
+  font-size: 4em;
+  text-transform: capitalize;
+}
+
+main p {
+  padding: 0 10px;
+  line-height: 20px;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+
+.reservation {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #101011;
+  padding: 10px 20px;
+}
+.reservation:hover {
+  background-color: #19191a;
+}
+
+.reservation:active{
+    transform: scale(0.98);
+}
+
+.mail,
+.reservation {
+  text-transform: capitalize;
+}
+
+.mail {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ffffff;
+}
+
+iframe {
+  border: none;
+}
+
+.iframe-container {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.map {
+  flex: 1;
+}
+
+.music {
+  flex: 1;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.411);
+}
+footer p {
+  color: #bebebe;
+  font-size: 10px;
+  text-align: center;
+  padding: 45px 0;
+}
+
+@media (max-width: 620px) {
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+
+    .burger-menu-icon{
+        width: 30px;
+    }
+
+    header{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+
+    input:checked ~ .mobile-nav{
+        display: block;
+    } 
+
+    input:checked + img {
+        transform: rotate(90deg);
+    }
+
+    .mobile-nav .navigation{
+        width: 100%;
+        height:calc(100vh - 100px);
+        flex-direction: column;
+        background-color: #f1f1f1;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .mobile-nav .navigation a{
+        color: #101011;
+    }
+
+
+}
+
+@media (max-width: 1024px) {
+  .iframe-container {
+    padding: 0 10px;
+    flex-direction: column;
+  }
+}
