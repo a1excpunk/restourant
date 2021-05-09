@@ -4,11 +4,12 @@ html {
 
 body {
   background-color: #2f3035;
-  background-image: url("./images/background-adare-restaurant.jpg");
+  background-image: url("../images/background-adare-restaurant.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
 }
 
 .mobile {
@@ -73,7 +74,6 @@ main {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  /* margin-bottom: 150px; */
 }
 
 main h1 {
@@ -116,20 +116,8 @@ iframe {
   border: none;
 }
 
-.iframe-container {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  gap: 30px;
+.map{ 
   margin: 20px 0;
-}
-
-.map {
-  flex: 1;
-}
-
-.music {
-  flex: 1;
 }
 
 footer {
@@ -140,6 +128,34 @@ footer p {
   font-size: 10px;
   text-align: center;
   padding: 45px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Our Music Page */
+.music {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-self: center;
+  height: 100%;
+  margin: 50px 0;
+}
+
+.music p {
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+@media (max-width: 950px) {
+  /* .music {
+    flex-direction: column;
+  } */
 }
 
 @media (max-width: 620px) {
@@ -169,7 +185,7 @@ footer p {
 
   input:checked ~ label .exit-button::after {
     content: "\2716";
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 30px;
     font-size: 2em;
@@ -181,7 +197,7 @@ footer p {
     height: 100%;
     flex-direction: column;
     background-color: #f1f1f1;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 20px 0;
@@ -194,12 +210,5 @@ footer p {
 
   .active {
     border-bottom: 2px solid #101011;
-  }
-}
-
-@media (max-width: 1024px) {
-  .iframe-container {
-    padding: 0 10px;
-    flex-direction: column;
   }
 }
