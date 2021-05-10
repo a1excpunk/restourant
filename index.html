@@ -19,51 +19,55 @@
     <meta name="twitter:card" content="summary_large_image">
     <title>Adare Restaurant</title>
     <link rel="stylesheet" href="./style/css-reset.css">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+
 </head>
 
 <body>
 
     <div class="container">
-        <header>
-            <a class="logo" href="./index.html">
-                <img src="./images/logo-adare-restaurant.png" alt="logo for Adare Restaurant">
-            </a>
-            <nav class="desktop">
-                <ul class="navigation">
-                    <li><a class="active" href="./index.html">home</a></li>
-                    <li><a href="#">menu</a></li>
-                    <li><a href="#">order online</a></li>
-                    <li><a href="./html/music.html">our music</a></li>
-                    <li><a href="./html/contact.html">contact</a></li>
-                </ul>
-            </nav>
-            <input type="checkbox" name="nav" id="nav">
-            <label for="nav" class="mobile">
-                <img src="./images/icon-burger-menu.svg" alt="" class="mobile burger-menu-icon">
-                <div class="exit-button"></div>
-            </label>
-            <nav class="mobile-nav mobile">
-                <ul class="navigation">
-                    <li><a class="active" href="./index.html">home</a></li>
-                    <li><a href="#">menu</a></li>
-                    <li><a href="#">order online</a></li>
-                    <li><a href="./html/music.html">our music</a></li>
-                    <li><a href="./html/contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <h1>let's meat</h1>
-            <p>We love sharing good food with great people. We bring over 30 years industry experience and passion to
-                <a href="index.html">Adare</a>. With a dishes that are carefully designed to bring you a truly
-                satisfying Irish food experience
-                that you are sure to remember.
-            </p>
-            <a href="#" target="_blank" class="reservation">make reservation</a>
-            <a href="mailto:123@gmail.com" class="mail">send mail</a>
-        </main>
+        <div class="content-container">
+            <header>
+                <a class="logo" href="./index.html">
+                    <img src="./images/logo-adare-restaurant.png" alt="logo for Adare Restaurant">
+                </a>
+                <nav class="desktop">
+                    <ul class="navigation">
+                        <li><a class="active" href="./index.html">home</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">order online</a></li>
+                        <li><a href="./html/music.html">music and meal</a></li>
+                        <li><a href="./html/contact.html">contact</a></li>
+                    </ul>
+                </nav>
+                <input type="checkbox" name="nav" id="nav">
+                <label for="nav" class="mobile">
+                    <img src="./images/icon-burger-menu.svg" alt="" class="mobile burger-menu-icon">
+                    <div class="exit-button"></div>
+                </label>
+                <nav class="mobile-nav mobile">
+                    <ul class="navigation">
+                        <li><a class="active" href="./index.html">home</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">order online</a></li>
+                        <li><a href="./html/music.html">music and meal</a></li>
+                        <li><a href="./html/contact.html">contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <main>
+                <h1>let's meat</h1>
+                <p>We love sharing good food with great people. We bring over 30 years industry experience and passion to
+                    <a href="index.html">Adare</a>. With a dishes that are carefully designed to bring you a truly
+                    satisfying Irish food experience
+                    that you are sure to remember.
+                </p>
+                <a href="#" target="_blank" class="reservation">make reservation</a>
+                <a href="./html/contact.html" class="mail">send mail</a>
+            </main>
+        </div>
 
         <section class="map">
             <iframe

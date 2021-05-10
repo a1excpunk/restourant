@@ -1,0 +1,224 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #0f0f0f;
+  background-image: url("../images/background.png");
+  background-repeat: repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.content-container{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/background-adare-restaurant.jpg");
+
+}
+
+p,
+h1,
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  text-transform: uppercase;
+  list-style: none;
+  padding: 15px;
+}
+
+li a {
+  text-transform: uppercase;
+  font-size: 0.85em;
+  padding-bottom: 13px;
+  border-bottom: 1px solid transparent;
+}
+
+li a:hover,
+main p a {
+  border-bottom: 1px solid #ffffff;
+}
+
+main {
+  color: #ffffff;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+main h1 {
+  font-size: 4em;
+  text-transform: capitalize;
+}
+
+main p {
+  padding: 0 10px;
+  line-height: 20px;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+.reservation {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #101011;
+  padding: 10px 20px;
+}
+.reservation:hover {
+  background-color: #19191a;
+}
+
+.reservation:active {
+  transform: scale(0.98);
+}
+
+.mail,
+.reservation {
+  text-transform: capitalize;
+}
+
+.mail {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ffffff;
+}
+
+iframe {
+  border: none;
+}
+
+.map {
+  margin: 20px 0;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.411);
+}
+footer p {
+  color: #bebebe;
+  font-size: 10px;
+  text-align: center;
+  padding: 45px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Contact Us Page */
+
+.contact-container {
+  display: flex;
+  margin: 50px auto;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  color: #0f0f0f;
+}
+
+form, .contact-info{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.contact-info{
+  background-color: #0f0f0f;
+  color: #b4b4b4;
+  gap: 100px;
+  justify-content:flex-start;
+}
+
+.contact-info p:first-of-type{
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+form{
+  gap: 20px;
+  position: relative;
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form p {
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #0f0f0f;
+}
+
+form label{
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #5a5a5a;
+}
+
+textarea, form input{
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #c4c4c49c;
+  padding: 15px;
+  font-family: sans-serif;
+}
+
+
+form input[type="submit"]{
+  background-color: #222222;
+  color: #ffffff;
+  align-self: center;
+  padding: 13px 30px;
+    align-self: flex-end;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+form input[type="submit"]:hover{
+  cursor: pointer;
+  background-color: #161616;
+}
+
+form input[type="submit"]:active{
+  transform: scale(0.98);
+}
+
+form input:focus, textarea:focus{
+  outline-color: #c7c7c7;
+}
