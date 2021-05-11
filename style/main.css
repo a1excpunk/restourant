@@ -19,12 +19,11 @@ body {
   margin: 0 auto;
 }
 
-.content-container{
+.hero-img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("../images/background-adare-restaurant.jpg");
-
+  background-image: url("../images/bg.jpg");
 }
 
 p,
@@ -39,12 +38,15 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  position: sticky;
+  top: 0;
+  background-color: #0f0f0fb4;
+  z-index: 10;
 }
 
 input[type="checkbox"] {
   display: none;
 }
-
 
 ul {
   display: flex;
@@ -94,10 +96,12 @@ main p {
   text-decoration: none;
   color: #ffffff;
   background-color: #101011;
-  padding: 10px 20px;
+  border: 2px solid transparent;
+  padding: 15px;
 }
 .reservation:hover {
-  background-color: #19191a;
+  background-color: transparent;
+  border: 2px solid #ffffff;
 }
 
 .reservation:active {
@@ -110,8 +114,13 @@ main p {
 }
 
 .mail {
-  padding-bottom: 5px;
-  border-bottom: 2px solid #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px;
+}
+
+.mail:hover {
+  background-color: #101011;
+  border-color: transparent;
 }
 
 iframe {
@@ -123,7 +132,7 @@ iframe {
 }
 
 footer {
-  background-color: rgba(0, 0, 0, 0.411);
+  background-color: #000000a1;
 }
 footer p {
   color: #bebebe;
@@ -136,7 +145,6 @@ footer p {
   display: none;
 }
 
-
 /* Contact Us Page */
 
 .contact-container {
@@ -147,7 +155,8 @@ footer p {
   color: #0f0f0f;
 }
 
-form, .contact-info{
+.contact-container form,
+.contact-info {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -155,43 +164,44 @@ form, .contact-info{
   padding: 50px;
 }
 
-.contact-info{
-  background-color: #0f0f0f;
+.contact-info {
+  background-color: #0c0c0c;
   color: #b4b4b4;
   gap: 100px;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
-.contact-info p:first-of-type{
+.contact-info p:first-of-type {
   font-weight: 600;
   font-size: 1.3em;
 }
 
-form{
+.contact-container form {
   gap: 20px;
   position: relative;
 }
 
-form div {
+.contact-container form div {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-form p {
+.contact-container form p {
   font-weight: 600;
   font-size: 1.3em;
   color: #0f0f0f;
 }
 
-form label{
+.contact-container form label {
   font-size: 0.7em;
   font-weight: 600;
   color: #5a5a5a;
 }
 
-textarea, form input{
+.contact-container textarea,
+.contact-container form input {
   border: none;
   border-radius: 5px;
   box-shadow: 2px 2px 5px #c4c4c49c;
@@ -199,26 +209,60 @@ textarea, form input{
   font-family: sans-serif;
 }
 
-
-form input[type="submit"]{
+.contact-container input[type="submit"] {
   background-color: #222222;
   color: #ffffff;
   align-self: center;
   padding: 13px 30px;
-    align-self: flex-end;
-    font-weight: 600;
-    letter-spacing: 2px;
+  align-self: flex-end;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
-form input[type="submit"]:hover{
+.contact-container input[type="submit"]:hover {
   cursor: pointer;
   background-color: #161616;
 }
 
-form input[type="submit"]:active{
+.contact-container input[type="submit"]:active {
   transform: scale(0.98);
 }
 
-form input:focus, textarea:focus{
+.contact-container input:focus,
+.contact-container textarea:focus {
   outline-color: #c7c7c7;
+}
+
+/* reservation */
+.reservation-hero-img {
+  background-image: url("../images/bg2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.reservation-container .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #aaa;
+  margin-right: 0.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+} */
+
+/* about us */
+.about-us-hero-img{
+  background-image: url('../images/chef7.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
