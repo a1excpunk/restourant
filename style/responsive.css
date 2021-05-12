@@ -88,6 +88,9 @@
   color: #ffffff;
 }
 
+.hidden.top-button{
+  display: block;
+}
 }
 
 @media (max-width: 620px) {
