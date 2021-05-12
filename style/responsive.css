@@ -54,7 +54,7 @@
     width: 70%;
   }
 
-  form,
+  .contact-container form,
   .contact-info {
     width: 100%;
     box-sizing: border-box;
@@ -74,5 +74,23 @@
   }
   .music .container .menu-cards-container .menu-card {
     padding: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .menu-cards{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-card {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   /* width: 100%; */
+  }
+
+  .menu-card p:last-of-type{
+    padding-bottom: 20px;
   }
 }
