@@ -22,6 +22,7 @@ body {
   background-position: center;
   background-size: cover;
   background-image: url("../images/bg.jpg");
+  height: 100vh;
 }
 
 p,
@@ -276,6 +277,7 @@ input[type="date"]:valid:before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 /* ========== Menu ==========*/
