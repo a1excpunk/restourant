@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap");
 body {
   background-color: #0f0f0f;
-  background-image: url("../images/background.png");
+  background-image: url("../images/black-brick-wall-textured-background.jpg");
+  background-position: start;
+  background-size: contain;
   background-repeat: repeat;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
 }
 
@@ -34,14 +37,19 @@ a {
 }
 
 header {
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
   position: sticky;
   top: 0;
-  background-color: #0f0f0fb4;
+  background-color: #0e0e0edc;
   z-index: 10;
+}
+
+.logo img{
+  width: 110px;
 }
 
 input[type="checkbox"] {
@@ -90,39 +98,6 @@ main p {
   line-height: 20px;
   max-width: 400px;
   min-width: 200px;
-}
-
-/* ========== Reservation ==========*/
-
-.reservation {
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #101011;
-  border: 2px solid transparent;
-  padding: 15px;
-}
-.reservation:hover {
-  background-color: transparent;
-  border: 2px solid #ffffff;
-}
-
-.reservation:active {
-  transform: scale(0.98);
-}
-
-.mail,
-.reservation {
-  text-transform: capitalize;
-}
-
-.mail {
-  border: 2px solid #ffffff;
-  padding: 10px;
-}
-
-.mail:hover {
-  background-color: #101011;
-  border-color: transparent;
 }
 
 /* ========== Map ==========*/
@@ -246,30 +221,138 @@ iframe {
   outline-color: #c7c7c7;
 }
 
-/* reservation */
+.mail-btn {
+  text-transform: capitalize;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-bottom-color: #ffffff;
+  transition-duration: 500ms;
+}
+
+.mail-btn:hover {
+  border: 2px solid #ffffff;
+}
+
+/* ========== Reservation ==========*/
+
+/* on main page */
+.reservation-btn {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #101011;
+  border: 2px solid transparent;
+  padding: 15px;
+  text-transform: capitalize;
+  transition-duration: 500ms;
+}
+.reservation-btn:hover,
+#submit:hover {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.reservation-btn:active,
+#submit:active {
+  transform: scale(0.98);
+}
+
+/* on reservation page */
+
 .reservation-hero-img {
   background-image: url("../images/bg2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 130vh;
 }
 
 .reservation-container .container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 50px;
 }
 
-/* input[type="date"]:before {
-  content: attr(placeholder) !important;
-  color: #aaa;
-  margin-right: 0.5em;
+.reservation-text {
+  flex: 50%;
+  align-self: center;
 }
-input[type="date"]:focus:before,
-input[type="date"]:valid:before {
-  content: "";
-} */
+.reservation-text h2 {
+  font-size: 2.5em;
+}
+.reservation-text p {
+  max-width: 300px;
+  padding-top: 50px;
+  font-size: 0.8em;
+}
+
+.reservation-container form {
+  flex: 50%;
+  display: grid;
+  gap: 20px;
+  grid-template: auto / repeat(2, 1fr);
+  grid-template-areas:
+    "name name"
+    "phone phone"
+    "email email"
+    "time date"
+    "person person"
+    ". submit";
+
+    background-color: #0c0c0c8e;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.reservation-container form label input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #0e0e0ec4;
+}
+
+.reservation-container form label p{
+  font-size: 0.8em;
+  color: #dbdbdb;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+}
+
+.reservation-name {
+  grid-area: name;
+}
+.reservation-phone {
+  grid-area: phone;
+}
+.reservation-email {
+  grid-area: email;
+}
+.reservation-time {
+  grid-area: time;
+}
+.reservation-date {
+  grid-area: date;
+}
+.reservation-person {
+  grid-area: person;
+}
+#submit {
+  padding: 12px;
+  grid-area: submit;
+  background-color: #0c0c0c;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition-duration: 500ms;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #0e0e0e94;
+}
 
 /* ========== About Us ==========*/
 .about-us-hero-img {
@@ -278,82 +361,84 @@ input[type="date"]:valid:before {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
 .about-us-content {
   display: flex;
   flex-direction: column;
-  height: 70vh;
-  justify-content: space-between;
-  margin-top: 50px;
-  padding: 0 10px;
+  justify-content: space-evenly;
+  height: 60vh;
+  padding: 0 60px;
   gap: 20px;
+  background-color: #0c0c0c4d;
+  position: absolute;
+  right: 0;
+  top: 120px;
 }
 .about-us-content h2 {
-  font-family: serif;
   font-size: 3em;
-  text-align: end;
-}
-
-.about-us-content p:first-of-type {
-  text-align: end;
-  max-width: 500px;
-  align-self: flex-end;
-}
-
-.about-us-content p:last-of-type {
-  font-size: 1.2em;
   text-align: center;
-  justify-content: flex-end;
 }
 
-.about-us-content p:last-of-type::after {
+.about-us-content p {
+  max-width: 500px;
+  line-height: 18px;
+}
+
+.about-us-hero-img > p:last-of-type {
+  font-size: 1em;
+  text-align: center;
+  color: #c0c0c0;
+}
+
+.about-us-hero-img > p:last-of-type::after {
   content: "\2965";
-  color: #f1f1f1;
-  font-size: 2em;
+  color: #c0c0c0;
+  font-size: 1.5em;
   display: block;
   margin-top: 10px;
+}
+
+.chef-says {
+  margin-top: 40px;
+  font-size: 3em;
+  text-align: center;
+  color: #ffffff;
 }
 
 .chef-container {
   margin: 50px 0;
   box-sizing: border-box;
-  display: grid;
-  grid-template: auto/ repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
   padding: 0 10px;
 }
 
 .chef-container div {
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  gap: 20px;
+  display: flex;
+  max-width: 390px;
+  background-color: #0c0c0c;
 }
 
-.chef-container div img {
-  grid-column: 1 / 2;
-  grid-row: 1/3;
-}
-
-.chef-container div h2 {
-  font-family: serif;
-  font-size: 2em;
-  grid-column: 2/3;
-  grid-row: 1/2;
-  align-self: center;
+.chef-container div:nth-of-type(3),
+.chef-container div:nth-of-type(4) {
+  flex-direction: row-reverse;
 }
 
 .chef-container div p {
   align-self: center;
-  grid-column: 2/3;
-  grid-row: 2/3;
-  font-size: 0.8em;
-  line-height: 17px;
+  padding: 0 30px;
 }
 
 /* ========== Menu ==========*/
 .menu-container {
-  background-color: #0f0f0f;
+  background-color: #0c0c0c81;
   margin: 50px 0;
   padding: 30px 0;
 }
@@ -362,7 +447,6 @@ input[type="date"]:valid:before {
   text-align: center;
   font-size: 1.3em;
   padding-bottom: 30px;
-  background-color: #0f0f0fe5;
 }
 
 .menu-cards {
@@ -370,12 +454,11 @@ input[type="date"]:valid:before {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   row-gap: 30px;
   column-gap: 10px;
+  padding-left: 20px;
 }
 
 .menu-card {
-  /* padding: 20px; */
   box-sizing: border-box;
-  /* background-color: #1d1d1d98; */
   display: grid;
   grid-template: repeat(2, 1fr) / 1fr 2fr 1fr;
   align-items: center;
@@ -385,15 +468,20 @@ input[type="date"]:valid:before {
   grid-column: 1 / 2;
   grid-row: 1/3;
   width: 100%;
+  border-radius: 100%;
 }
 
 .menu-card p:nth-of-type(1) {
   grid-column: 2/3;
   grid-row: 1/2;
   padding-left: 20px;
+  font-size: 1.2em;
+  position: relative;
 }
+
 .menu-card p:nth-of-type(2) {
-  font-size: 0.6em;
+  font-size: 0.8em;
+  color: #adadad;
   grid-column: 2/3;
   grid-row: 2/3;
   padding-left: 20px;
@@ -402,16 +490,17 @@ input[type="date"]:valid:before {
   grid-column: 3/4;
   grid-row: 1/3;
   justify-self: center;
+  font-size: 1.3em;
 }
 
 /* ========== Footer ==========*/
 
-footer {
-  background-color: #000000a1;
+footer ul{
+  display: flex;
+  flex-direction: column;
 }
-footer p {
-  color: #bebebe;
-  font-size: 10px;
-  text-align: center;
-  padding: 45px 0;
+
+footer img{
+  width: 30px;
+  height: 30px;
 }
