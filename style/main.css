@@ -48,7 +48,7 @@ header {
   z-index: 10;
 }
 
-.logo img{
+.logo img {
   width: 110px;
 }
 
@@ -56,7 +56,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-ul {
+nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -73,7 +73,7 @@ li a {
   border-bottom: 1px solid transparent;
 }
 
-li a:hover,
+nav li a:hover,
 main p a {
   border-bottom: 1px solid #ffffff;
 }
@@ -197,22 +197,23 @@ iframe {
   font-family: sans-serif;
 }
 
-.contact-container input[type="submit"] {
-  background-color: #222222;
+.contact-container #send {
+  background-color: #d84400;
   color: #ffffff;
   align-self: center;
-  padding: 13px 30px;
+  padding: 13px 50px;
   align-self: flex-end;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 2px;
+  border-radius: 50px;
 }
 
-.contact-container input[type="submit"]:hover {
+.contact-container #send:hover {
   cursor: pointer;
-  background-color: #161616;
+  background-color: #d14200;
 }
 
-.contact-container input[type="submit"]:active {
+.contact-container #send:active {
   transform: scale(0.98);
 }
 
@@ -225,7 +226,6 @@ iframe {
   text-transform: capitalize;
   padding: 10px;
   border: 2px solid transparent;
-  border-bottom-color: #ffffff;
   transition-duration: 500ms;
 }
 
@@ -239,20 +239,19 @@ iframe {
 .reservation-btn {
   text-decoration: none;
   color: #ffffff;
-  background-color: #101011;
   border: 2px solid transparent;
-  padding: 15px;
+  background-color: #d84400;
+  padding: 15px 30px;
   text-transform: capitalize;
-  transition-duration: 500ms;
-}
-.reservation-btn:hover,
-#submit:hover {
-  background-color: transparent;
-  border: 2px solid #ffffff;
+  font-weight: 500;
+  position: relative;
+  border-radius: 50px;
 }
 
-.reservation-btn:active,
-#submit:active {
+.reservation-btn:hover {
+  background-color: #d14200;
+}
+.reservation-btn:active {
   transform: scale(0.98);
 }
 
@@ -298,9 +297,9 @@ iframe {
     "person person"
     ". submit";
 
-    background-color: #0c0c0c8e;
-    padding: 50px;
-    box-sizing: border-box;
+  background-color: #0c0c0c8e;
+  padding: 50px;
+  box-sizing: border-box;
 }
 
 .reservation-container form label input {
@@ -309,10 +308,10 @@ iframe {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  box-shadow: 5px 5px 5px #0e0e0ec4;
+  box-shadow: 3px 3px 5px #0e0e0ec4;
 }
 
-.reservation-container form label p{
+.reservation-container form label p {
   font-size: 0.8em;
   color: #dbdbdb;
   font-weight: 400;
@@ -339,19 +338,26 @@ iframe {
   grid-area: person;
 }
 #submit {
-  padding: 12px;
+  padding: 12px 20px;
   grid-area: submit;
-  background-color: #0c0c0c;
+  background-color: #d84400;
   border: none;
   color: #ffffff;
-  font-size: 1.2em;
+  font-size: 1em;
   border: 2px solid transparent;
   cursor: pointer;
-  transition-duration: 500ms;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   border-radius: 5px;
-  box-shadow: 5px 5px 5px #0e0e0e94;
+  border-radius: 50px;
+}
+
+#submit:hover {
+  background-color: #d14200;
+}
+
+#submit:active {
+  transform: scale(0.98);
 }
 
 /* ========== About Us ==========*/
@@ -495,12 +501,93 @@ iframe {
 
 /* ========== Footer ==========*/
 
-footer ul{
-  display: flex;
-  flex-direction: column;
+footer {
+  display: grid;
+  grid-template: 1fr 50px / repeat(5, 1fr);
+  box-sizing: border-box;
+  justify-items: center;
+  background-color: #0c0c0c;
+  padding: 50px 10px;
+  row-gap: 30px;
+  column-gap: 20px;
+  align-items: flex-start;
 }
 
-footer img{
+footer > p {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  padding: 20px 0;
+  font-size: 0.7em;
+  justify-content: flex-start;
+}
+
+.footer-nav,
+.footer-menu,
+.footer-icons,
+.footer-contact-info,
+.footer-open-hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-icons img {
   width: 30px;
   height: 30px;
+}
+
+
+.footer-icons a{
+  position: relative;
+}
+
+.footer-icons a::before{
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #d84400;
+  bottom: 20px;
+  right: 0;
+  z-index: -1;
+}
+.footer-icons li a:hover {
+  z-index: 2;
+}
+
+.footer-icons li a:active {
+  z-index: 2;
+}
+
+.footer-icons ul {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-contact-info img {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.footer-contact-info ul{
+  font-size: 0.7em;
+  line-height: 20px;
+}
+
+.footer-nav > p,
+.footer-menu > p,
+.footer-icons > p,
+.footer-contact-info > p,
+.footer-open-hours > p {
+  align-self: flex-start;
+}
+
+.footer-nav ul li,
+.footer-menu ul li,
+.footer-contact-info ul li,
+.footer-open-hours ul li{
+  padding: 7px 0;
 }

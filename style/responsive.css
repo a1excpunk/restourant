@@ -102,11 +102,22 @@
     border-radius: 0;
   }
 
-  .music .container .menu-cards-container {
-    padding: 0;
+  footer{
+    grid-template: 1fr 1fr 1fr 50px / repeat(2, 1fr);
   }
-  .music .container .menu-cards-container .menu-card {
-    padding: 0;
+
+  footer > p{
+    grid-column: 1/-1;
+    grid-row: -1/-2;
+  }
+
+  footer .footer-contact-info{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  
+  footer .footer-icons{
+    grid-column: 1/-1;
   }
 }
 
