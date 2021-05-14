@@ -79,13 +79,14 @@ main p a {
 }
 
 main {
+  margin-top: 30px;
   color: #ffffff;
   min-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 main h1 {
@@ -94,10 +95,11 @@ main h1 {
 }
 
 main p {
-  padding: 0 10px;
+  padding: 20px;
   line-height: 20px;
-  max-width: 400px;
+  max-width: 600px;
   min-width: 200px;
+  backdrop-filter:brightness(60%);
 }
 
 /* ========== Map ==========*/
@@ -151,7 +153,7 @@ iframe {
   background-image: url("../images/contact-bg.jpg");
   background-position: center;
   background-size: cover;
-  filter: brightness(20%);
+  filter: brightness(40%);
 }
 
 .contact-info p {
@@ -223,6 +225,7 @@ iframe {
 }
 
 .mail-btn {
+  font-size: 1.2em;
   text-transform: capitalize;
   padding: 10px;
   border: 2px solid transparent;
@@ -262,18 +265,21 @@ iframe {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 130vh;
+  min-height: 130vh;
 }
 
 .reservation-container .container {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .reservation-text {
   flex: 50%;
   align-self: center;
+  padding:0 20px;
 }
 .reservation-text h2 {
   font-size: 2.5em;
@@ -282,22 +288,23 @@ iframe {
   max-width: 300px;
   padding-top: 50px;
   font-size: 0.8em;
+  line-height: 20px;
 }
 
 .reservation-container form {
   flex: 50%;
   display: grid;
   gap: 20px;
-  grid-template: auto / repeat(2, 1fr);
+  grid-template: repeat(5, 1fr) 45px / repeat(2,minmax(70px, 1fr));
   grid-template-areas:
     "name name"
     "phone phone"
     "email email"
     "time date"
     "person person"
-    ". submit";
+    "submit submit";
 
-  background-color: #0c0c0c8e;
+  background-color: #0c0c0c88;
   padding: 50px;
   box-sizing: border-box;
 }
@@ -308,7 +315,7 @@ iframe {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  box-shadow: 3px 3px 5px #0e0e0ec4;
+  box-shadow: 3px 3px 5px #2b2b2b7c;
 }
 
 .reservation-container form label p {
@@ -338,7 +345,6 @@ iframe {
   grid-area: person;
 }
 #submit {
-  padding: 12px 20px;
   grid-area: submit;
   background-color: #d84400;
   border: none;
@@ -392,7 +398,7 @@ iframe {
 
 .about-us-content p {
   max-width: 500px;
-  line-height: 18px;
+  line-height: 20px;
 }
 
 .about-us-hero-img > p:last-of-type {
@@ -411,7 +417,7 @@ iframe {
 
 .chef-says {
   margin-top: 40px;
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
   color: #ffffff;
 }
@@ -428,7 +434,7 @@ iframe {
 
 .chef-container div {
   display: flex;
-  max-width: 390px;
+  max-width: 450px;
   background-color: #0c0c0c;
 }
 
@@ -437,7 +443,7 @@ iframe {
   flex-direction: row-reverse;
 }
 
-.chef-container div p {
+.chef-container p {
   align-self: center;
   padding: 0 30px;
 }
@@ -451,8 +457,9 @@ iframe {
 
 .menu-container > p {
   text-align: center;
-  font-size: 1.3em;
-  padding-bottom: 30px;
+  font-size: 2em;
+  padding-bottom: 50px;
+  position: relative;
 }
 
 .menu-cards {
@@ -502,18 +509,21 @@ iframe {
 /* ========== Footer ==========*/
 
 footer {
-  display: grid;
-  grid-template: 1fr 50px / repeat(5, 1fr);
-  box-sizing: border-box;
-  justify-items: center;
   background-color: #0c0c0c;
-  padding: 50px 10px;
-  row-gap: 30px;
-  column-gap: 20px;
-  align-items: flex-start;
 }
 
-footer > p {
+.footer-container {
+  display: grid;
+  grid-template-columns:repeat(5, 1fr);
+  grid-template-rows: auto;
+  box-sizing: border-box;
+  justify-items: center;
+  padding: 50px 10px 20px 10px;
+  row-gap: 30px;
+  column-gap: 20px;
+}
+
+.footer-container > p {
   grid-column: 1/-1;
   grid-row: 2/3;
   padding: 20px 0;
@@ -528,7 +538,8 @@ footer > p {
 .footer-open-hours {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+
   gap: 30px;
 }
 
@@ -537,13 +548,12 @@ footer > p {
   height: 30px;
 }
 
-
-.footer-icons a{
+.footer-icons a {
   position: relative;
 }
 
-.footer-icons a::before{
-  content: '';
+.footer-icons a::before {
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -554,10 +564,6 @@ footer > p {
   z-index: -1;
 }
 .footer-icons li a:hover {
-  z-index: 2;
-}
-
-.footer-icons li a:active {
   z-index: 2;
 }
 
@@ -572,22 +578,23 @@ footer > p {
   margin-right: 10px;
 }
 
-.footer-contact-info ul{
+.footer-contact-info ul {
   font-size: 0.7em;
   line-height: 20px;
-}
-
-.footer-nav > p,
-.footer-menu > p,
-.footer-icons > p,
-.footer-contact-info > p,
-.footer-open-hours > p {
-  align-self: flex-start;
 }
 
 .footer-nav ul li,
 .footer-menu ul li,
 .footer-contact-info ul li,
-.footer-open-hours ul li{
+.footer-open-hours ul li {
   padding: 7px 0;
+}
+
+.footer-open-hours ul li p {
+  font-size: 0.8em;
+}
+
+.footer-menu a:hover,
+.footer-nav a:hover {
+  color: #d84400;
 }

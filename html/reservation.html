@@ -13,9 +13,6 @@
     <meta property="og:image" content="https://a1excpunk.github.io/restourant/images/bg.jpg" />
     <meta property="og:description" content="Make a Reservation" />
     <!-- Twitter Metadata -->
-    <!-- <meta name="twitter:title" content="">
-                    <meta name="twitter:description" content="">
-                    <meta name="twitter:image" content=""> -->
     <meta name="twitter:card" content="summary_large_image">
     <title>Adare || Reservation</title>
     <link rel="stylesheet" href="../style/css-reset.css">
@@ -33,6 +30,7 @@
             <nav class="desktop">
                 <ul class="navigation">
                     <li><a href="../index.html">home</a></li>
+                    <li><a class="active" href="./reservation.html">reservation</a></li>
                     <li><a href="./menu.html">menu</a></li>
                     <li><a href="./about.html">about us</a></li>
                     <li><a href="./contact.html">contact</a></li>
@@ -46,6 +44,7 @@
             <nav class="mobile-nav mobile">
                 <ul class="navigation">
                     <li><a href="../index.html">home</a></li>
+                    <li><a class="active" href="./reservation.html">reservation</a></li>
                     <li><a href="./menu.html">menu</a></li>
                     <li><a href="./about.html">about us</a></li>
                     <li><a href="./contact.html">contact</a></li>
@@ -63,102 +62,104 @@
                 </div>
                 <form action="">
                     <label for="name" class="reservation-name">
-                        <p>Enter Your Name</p>
+                        <p>Your Name</p>
                         <input type="text" id="name" name="name">
                     </label>
                     <label for="phone" class="reservation-phone">
-                        <p>Enter Your Phone Number</p>
+                        <p>Your Phone Number</p>
                         <input type="tel" id="phone" name="phone">
                     </label>
                     <label for="email" class="reservation-email">
-                        <p>Enter Your Email</p>
+                        <p>Your Email</p>
                         <input type="email" id="email" name="email">
                     </label>
                     <label for="time" class="reservation-time">
-                        <p>Enter Reservation Time</p>
+                        <p>Reservation Time</p>
                         <input type="time" name="time" id="time">
                     </label>
                     <label for="date" class="reservation-date">
-                        <p>Enter Reservation Date</p>
+                        <p>Reservation Date</p>
                         <input type="date" id="date" name="date" placeholder="set date">
                     </label>
                     <label for="person" class="reservation-person">
-                        <p>Enter Number Of Persons</p>
+                        <p>Number Of Persons</p>
                         <input type="number" name="person" id="person">
                     </label>
-                    <input type="submit" name="submit" id="submit" value="Make a Reservation">
+                    <input type="submit" name="submit" id="submit" value="Reservation">
                 </form>
             </div>
         </div>
     </div>
     <footer>
-        <div class="footer-nav">
-            <p>Navigation</p>
-            <ul>
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT</a></li>
-                <li><a href="./menu.html">MENU</a></li>
-                <li><a href="./reservation.html">RESERVATION</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
+        <div class="footer-container container">
+            <div class="footer-nav">
+                <p>Navigation</p>
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="./reservation.html">RESERVATION</a></li>
+                    <li><a href="./menu.html">MENU</a></li>
+                    <li><a href="./about.html">ABOUT US</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <p>Menu</p>
+                <ul>
+                    <li><a href="./menu.html#breakfast">Breakfast</a></li>
+                    <li><a href="./menu.html#lunch">Lunch</a></li>
+                    <li><a href="./menu.html#dinner">Dinner</a></li>
+                </ul>
+            </div>
+            <div class="footer-open-hours">
+                <p>Open Hours</p>
+                <ul>
+                    <li>
+                        <p>Mon: 8AM - 11PM</p>
+                    </li>
+                    <li>
+                        <p>Tue: 8AM - 11PM</p>
+                    </li>
+                    <li>
+                        <p>Wed: 8AM - 11PM</p>
+                    </li>
+                    <li>
+                        <p>Thu: 8AM - 11PM</p>
+                    </li>
+                    <li>
+                        <p>Fri: 8AM - 3PM</p>
+                    </li>
+                    <li>
+                        <p>Sun: 10AM - 2AM</p>
+                    </li>
+                    <li>
+                        <p>Sat: 10AM - 11PM</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-contact-info">
+                <p>Contact Info</p>
+                <ul>
+                    <li>
+                        <p><img src="../images/icons/call.svg" alt=""> Tel: +995555123456</p>
+                    </li>
+                    <li>
+                        <p><img src="../images/icons/envelope.svg" alt="">E-mail: Adare@gmail.com</p>
+                    </li>
+                    <li>
+                        <p><img src="../images/icons/landmark.svg" alt="">Adress: Main St, Blackabbey, Adare</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-icons">
+                <p>Connect To Us</p>
+                <ul>
+                    <li><a href="#"><img src="../images/icons/facebook.svg" alt="facebook icon"></a></li>
+                    <li><a href="#"><img src="../images/icons/instagram.svg" alt="instagram icon"></a></li>
+                    <li><a href="#"><img src="../images/icons/twitter.svg" alt="twitter icon"></a></li>
+                </ul>
+            </div>
+            <p>&copy; Alex 2021</p>
         </div>
-        <div class="footer-menu">
-            <p>Menu</p>
-            <ul>
-                <li><a href="./menu.html#breakfast">Breakfast</a></li>
-                <li><a href="./menu.html#lunch">Lunch</a></li>
-                <li><a href="./menu.html#dinner">Dinner</a></li>
-            </ul>
-        </div>
-        <div class="footer-open-hours">
-            <p>Open Hours</p>
-            <ul>
-                <li>
-                    <p>Mon: 8AM - 11PM</p>
-                </li>
-                <li>
-                    <p>Tue: 8AM - 11PM</p>
-                </li>
-                <li>
-                    <p>Wed: 8AM - 11PM</p>
-                </li>
-                <li>
-                    <p>Thu: 8AM - 11PM</p>
-                </li>
-                <li>
-                    <p>Fri: 8AM - 3PM</p>
-                </li>
-                <li>
-                    <p>Sun: 10AM - 2AM</p>
-                </li>
-                <li>
-                    <p>Sat: 10AM - 11PM</p>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-icons">
-            <p>Connect To Us</p>
-            <ul>
-                <li><a href="#"><img src="../images/icons/facebook.svg" alt="facebook icon"></a></li>
-                <li><a href="#"><img src="../images/icons/instagram.svg" alt="instagram icon"></a></li>
-                <li><a href="#"><img src="../images/icons/twitter.svg" alt="twitter icon"></a></li>
-            </ul>
-        </div>
-        <div class="footer-contact-info">
-            <p>Contact Info</p>
-            <ul>
-                <li>
-                    <p><img src="../images/icons/call.svg" alt=""> Tel: +995555123456</p>
-                </li>
-                <li>
-                    <p><img src="../images/icons/envelope.svg" alt="">E-mail: Adare@gmail.com</p>
-                </li>
-                <li>
-                    <p><img src="../images/icons/landmark.svg" alt="">Adress: Main St, Blackabbey, Adare</p>
-                </li>
-            </ul>
-        </div>
-        <p>&copy; Alex 2021</p>
     </footer>
 
 </body>

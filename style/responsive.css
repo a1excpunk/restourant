@@ -9,7 +9,7 @@
     display: none;
   }
 
-  header{
+  header {
     position: static;
   }
 
@@ -64,34 +64,56 @@
     box-sizing: border-box;
   }
 
-  
+  /* chef */
   .chef-container div {
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
   }
 
-  
-  .chef-container div img{
+  .chef-container div:nth-of-type(3),
+  .chef-container div:nth-of-type(4) {
+    flex-direction: column;
+  }
+
+  .chef-container p {
+    padding: 40px;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  .chef-container div img {
     width: 100%;
-   }
+  }
 
-   /* ========== Top button ==========*/
+  /* ========== Top button ==========*/
 
-.top {
-  width: 50px;
-  height: 50px;
-  background-color: #1a1a1ada;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  border: none;
-  color: #ffffff;
-  letter-spacing: 2px;
-}
+  .top {
+    width: 50px;
+    height: 50px;
+    background-color: #1a1a1ada;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
 
-.hidden.top-button{
-  display: block;
-}
+  .hidden.top-button {
+    display: block;
+  }
+
+  .footer-container {
+    grid-template: repeat(2, 1fr) 20px / repeat(3, 1fr);
+  }
+
+  .footer-container > p {
+    grid-row: 3/4;
+  }
+
+  .footer-contact-info{
+    grid-column: 1/3;
+  }
 }
 
 @media (max-width: 620px) {
@@ -102,22 +124,15 @@
     border-radius: 0;
   }
 
-  footer{
-    grid-template: 1fr 1fr 1fr 50px / repeat(2, 1fr);
-  }
+  .reservation-container .container{
+    flex-direction: column;
+    padding: 0;
 
-  footer > p{
-    grid-column: 1/-1;
-    grid-row: -1/-2;
-  }
-
-  footer .footer-contact-info{
-    grid-column: 2/3;
-    grid-row: 2/3;
   }
   
-  footer .footer-icons{
-    grid-column: 1/-1;
+  .reservation-container form , .reservation-text{
+    margin-bottom: 50px;
+    flex: 100%;
   }
 }
 
@@ -146,7 +161,50 @@
     flex-direction: column;
   }
 
-  .about-us-content p{
-   overflow: scroll;
+  .about-us-content {
+    padding: 20px;
   }
+
+  .about-us-content p {
+    overflow: auto;
+  }
+
+  
+  .footer-container {
+    grid-template: 220px 230px 150px 20px / repeat(2,1fr);
+  }
+
+  .footer-container > p {
+    grid-row: 4/5;
+  }
+
+  .footer-icons{
+    grid-column:2/3 ;
+    grid-row:2/3 ;
+  }
+  
+  .footer-contact-info{
+    grid-column: 1/3;
+  }
+
+
+  .reservation-container form {
+    flex: 50%;
+    display: grid;
+    gap: 20px;
+    grid-template: repeat(6, 1fr) 50px / repeat(2,minmax(70px, 1fr));
+    grid-template-areas:
+      "name name"
+      "phone phone"
+      "email email"
+      "time time"
+      "date date"
+      "person person"
+      "submit submit";
+  
+    background-color: #0c0c0c88;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  
 }
