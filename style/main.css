@@ -529,6 +529,26 @@ iframe {
 }
 
 /* ========== Menu ==========*/
+.menu-btns{
+  display: flex;
+  justify-content: space-around;
+  background-color: #d84400;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 50px;
+}
+
+.menu-btn{
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.menu-btn:hover{
+  color: #0c0c0c;
+}
+
 .menu-container {
   background-color: #0c0c0c81;
   margin: 50px 0;

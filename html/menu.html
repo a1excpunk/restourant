@@ -35,12 +35,11 @@
                 <li><a href="./contact.html">contact</a></li>
             </ul>
         </nav>
-        <input type="checkbox" name="nav" id="nav">
-        <label for="nav" class="mobile">
+        <div class="mobile burger-button">
             <img src="../images/icons/icon-burger-menu.svg" alt="byrger menu icon" class="mobile burger-menu-icon">
-            <div class="exit-button"></div>
-        </label>
+        </div>
         <nav class="mobile-nav mobile">
+            <div class="exit-button">&times;</div>
             <ul class="navigation">
                 <li><a href="../index.html">home</a></li>
                 <li><a href="./reservation.html">RESERVATION</a></li>
@@ -54,7 +53,7 @@
     <a href="#top" class="hidden top-button"><button class="top">TOP</button></a>
 
     <div class="container">
-        <div>
+        <div class="menu-btns">
             <p class="menu-btn">Breakfast</p>
             <p class="menu-btn">Lunch</p>
             <p class="menu-btn">Dinner</p>
@@ -222,7 +221,7 @@
                 </div>
             </div>
         </div>
-        <div class="menu-container hidden lunch-menu">
+        <div class="menu-container lunch-menu">
             <p id="lunch">Lunch Menu</p>
             <div class="menu-cards">
 
@@ -384,7 +383,7 @@
 
             </div>
         </div>
-        <div class="menu-container hidden dinner-menu">
+        <div class="menu-container dinner-menu">
             <p id="dinner">Dinner Menu</p>
             <div class="menu-cards">
                 <div class="menu-card">
@@ -620,6 +619,19 @@
 
     <script>
 
+        // mobile menu exit btn
+        let burgerBtn = document.querySelector('.burger-button');
+        let menuCloseBtn = document.querySelector('.exit-button');
+        let mobileNavigation = document.querySelector('.mobile-nav')
+        burgerBtn.addEventListener('click', function(){
+            mobileNavigation.style.height = "100%"
+            menuCloseBtn.style.display = "block"
+        })
+        menuCloseBtn.addEventListener('click', function(){
+            mobileNavigation.style.height = "0%"
+            menuCloseBtn.style.display = "none"
+        })
+console.log(menuCloseBtn);
 
         // Menu modal
         let mealCard = document.querySelectorAll('.meal');
