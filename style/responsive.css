@@ -1,7 +1,4 @@
 @media screen and (max-width: 950px) {
-  .active {
-    border-bottom: 2px solid #d14200;
-  }
   .mobile {
     display: block;
   }
@@ -26,8 +23,9 @@
     left: 0;
     overflow: hidden;
     transition: 500ms;
-    background-color: #f1f1f1;
-    z-index: 5;
+    background-color: #0c0c0c;
+    z-index: 15;
+    color: #ffffff;
   }
 
   .navigation {
@@ -47,7 +45,8 @@
   }
 
   .mobile-nav .navigation a {
-    color: #101011;
+    color: #ffffff;
+    font-size: 1.7em;
   }
 
 

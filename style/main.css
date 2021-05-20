@@ -66,7 +66,9 @@
   cursor: pointer;
 }
 
-
+.active {
+  border-bottom: 2px solid #d14200;
+}
 
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap");
@@ -146,7 +148,7 @@ li a {
 
 nav li a:hover,
 main p a {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 2px solid #d14200;
 }
 
 main {
@@ -323,7 +325,7 @@ iframe {
 }
 
 .reservation-btn:hover {
-  background-color: #d14200;
+  background-color: #c23d00;
 }
 .reservation-btn:active {
   transform: scale(0.98);
