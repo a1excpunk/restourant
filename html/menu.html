@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../style/css-reset.css">
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/responsive.css">
+    <script src="../js/script.js" defer></script>
 </head>
 
 <body>
@@ -35,6 +36,7 @@
                 <li><a href="./contact.html">contact</a></li>
             </ul>
         </nav>
+        <!-- mobile nav -->
         <div class="mobile burger-button">
             <img src="../images/icons/icon-burger-menu.svg" alt="byrger menu icon" class="mobile burger-menu-icon">
         </div>
@@ -54,13 +56,14 @@
 
     <div class="container">
         <div class="menu-btns">
-            <p class="menu-btn">Breakfast</p>
-            <p class="menu-btn">Lunch</p>
-            <p class="menu-btn">Dinner</p>
+            <p class="menu-btn" id="all">All</p>
+            <p class="menu-btn menu-button" id="breakfast">Breakfast</p>
+            <p class="menu-btn menu-button" id="lunch">Lunch</p>
+            <p class="menu-btn menu-button" id="dinner">Dinner</p>
         </div>
 
-        <div class="menu-container breakfast-menu">
-            <p id="breakfast">Breakfast Menu</p>
+        <div class="menu-container" id="breakfast-menu">
+            <p>Breakfast Menu</p>
             <div class="menu-cards">
 
                 <div class="menu-card">
@@ -221,8 +224,8 @@
                 </div>
             </div>
         </div>
-        <div class="menu-container lunch-menu">
-            <p id="lunch">Lunch Menu</p>
+        <div class="menu-container" id="lunch-menu">
+            <p>Lunch Menu</p>
             <div class="menu-cards">
 
                 <div class="menu-card">
@@ -383,8 +386,8 @@
 
             </div>
         </div>
-        <div class="menu-container dinner-menu">
-            <p id="dinner">Dinner Menu</p>
+        <div class="menu-container" id="dinner-menu">
+            <p>Dinner Menu</p>
             <div class="menu-cards">
                 <div class="menu-card">
                     <img class="menu-img" src="../images/Turmeric-Chicken-Flatbread.jpeg" alt="" width="200">
@@ -617,67 +620,6 @@
         </div>
     </footer>
 
-    <script>
-
-        // mobile menu exit btn
-        let burgerBtn = document.querySelector('.burger-button');
-        let menuCloseBtn = document.querySelector('.exit-button');
-        let mobileNavigation = document.querySelector('.mobile-nav')
-        burgerBtn.addEventListener('click', function(){
-            mobileNavigation.style.height = "100%"
-            menuCloseBtn.style.display = "block"
-        })
-        menuCloseBtn.addEventListener('click', function(){
-            mobileNavigation.style.height = "0%"
-            menuCloseBtn.style.display = "none"
-        })
-console.log(menuCloseBtn);
-
-        // Menu modal
-        let mealCard = document.querySelectorAll('.meal');
-        let img = document.querySelectorAll('.menu-img');
-        let captionText = document.querySelectorAll(".caption");
-        let menuCard = document.querySelectorAll(".menu-card");
-        let imageId = document.querySelectorAll('.img');
-        let closeBtn = document.querySelectorAll('.close');
-
-        for (let i = 0; i < img.length; i++) {
-            let captionSrc = menuCard[i].childNodes;
-            img[i].addEventListener('click', function () {
-                mealCard[i].style.display = "block";
-                imageId[i].src = this.src;
-                captionText[i].innerHTML = captionSrc[3].textContent;
-            })
-            closeBtn[i].addEventListener('click', function () {
-                mealCard[i].style.display = "none"
-            })
-        }
-
-
-        // Menu toggle
-        let menuBtn = document.querySelectorAll('.menu-btn');
-        let menu = document.querySelectorAll('.menu-container');
-        // automate!!!!!!!
-        for (let i = 0; i < 3; i++) {
-            menuBtn[i].addEventListener('click', function () {
-                if (menu[i].classList.contains('breakfast-menu')) {
-                    menu[i].classList.remove('hidden')
-                    menu[1].classList.add('hidden')
-                    menu[2].classList.add('hidden')
-                }
-                if (menu[i].classList.contains('lunch-menu')) {
-                    menu[i].classList.remove('hidden')
-                    menu[0].classList.add('hidden')
-                    menu[2].classList.add('hidden')
-                }
-                if (menu[i].classList.contains('dinner-menu')) {
-                    menu[i].classList.remove('hidden')
-                    menu[0].classList.add('hidden')
-                    menu[1].classList.add('hidden')
-                }
-            })
-        }
-    </script>
 </body>
 
 </html>

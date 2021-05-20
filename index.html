@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./style/css-reset.css">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/responsive.css">
-
+    <script src="./js/script.js" defer></script>
 </head>
 
 <body>
@@ -37,20 +37,20 @@
                     <li><a href="./html/contact.html">contact</a></li>
                 </ul>
             </nav>
-            <input type="checkbox" name="nav" id="nav">
-            <label for="nav" class="mobile">
-                <img src="./images/icons/icon-burger-menu.svg" alt="" class="mobile burger-menu-icon">
-                <div class="exit-button"></div>
-            </label>
-            <nav class="mobile-nav mobile">
-                <ul class="navigation">
-                    <li><a class="active" href="./index.html">home</a></li>
-                    <li><a href="./html/reservation.html">RESERVATION</a></li>
-                    <li><a href="./html/menu.html">menu</a></li>
-                    <li><a href="./html/about.html">about us</a></li>
-                    <li><a href="./html/contact.html">contact</a></li>
-                </ul>
-            </nav>
+        <!-- mobile nav -->
+        <div class="mobile burger-button">
+            <img src="../images/icons/icon-burger-menu.svg" alt="byrger menu icon" class="mobile burger-menu-icon">
+        </div>
+        <nav class="mobile-nav mobile">
+            <div class="exit-button">&times;</div>
+            <ul class="navigation">
+                <li><a class="active" href="./index.html">home</a></li>
+                <li><a href="./html/reservation.html">reservation</a></li>
+                <li><a  href="./html/menu.html">menu</a></li>
+                <li><a href="./html/about.html">about us</a></li>
+                <li><a href="./html/contact.html">contact</a></li>
+            </ul>
+        </nav>
         </header>
 
         <div class="container">
