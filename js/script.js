@@ -43,9 +43,11 @@ for (let i = 0; i < img.length; i++) {
 
 
 // Menu toggle
-let menuBtn = document.querySelectorAll('.menu-button');
 let menu = document.querySelectorAll('.menu-container');
+
 let allBtn = getById('all');
+
+let menuBtn = document.querySelectorAll('.menu-button');
 
 //add event listeners to all of the buttons
 for (let i = 0; i < menuBtn.length; i++) {
@@ -61,6 +63,33 @@ for (let i = 0; i < menuBtn.length; i++) {
     });
 }
 
-allBtn.addEventListener('click', function(){
+allBtn.addEventListener('click', function () {
     menu.forEach(el => show(el))
+})
+
+// show TOP button on scroll
+let topBtn = document.querySelector('.top-button')
+
+window.addEventListener('scroll', function () {
+    if (document.documentElement.scrollTop > 100) {
+        topBtn.classList.remove('hidden')
+    }
+    if (document.documentElement.scrollTop === 0) {
+        topBtn.classList.add('hidden')
+    }
+})
+
+// attach active-button atate
+let activeBtn = document.querySelector('.active-button');
+let menuBtns = document.querySelectorAll('.menu-btn');
+
+menuBtns.forEach(btn => {
+    btn.addEventListener('click', function(e){
+        menuBtns.forEach(activeBtn => {
+            if(activeBtn !== e.currentTarget){
+                activeBtn.classList.remove('active-button')
+            }
+        })
+        e.currentTarget.classList.add('active-button')
+    })
 })
