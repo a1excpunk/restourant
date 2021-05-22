@@ -104,5 +104,5 @@ let preload = document.querySelector('.preload')
 window.addEventListener('load', function () {
     setTimeout(() => {
         preload.classList.add('preload-hide')
-    }, 2000)
+    }, 1000)
 })
