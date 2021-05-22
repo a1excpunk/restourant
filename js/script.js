@@ -44,10 +44,14 @@ for (let i = 0; i < img.length; i++) {
 
 // Menu toggle
 let menu = document.querySelectorAll('.menu-container');
+let menuBtn = document.querySelectorAll('.menu-button');
 
 let allBtn = getById('all');
-
-let menuBtn = document.querySelectorAll('.menu-button');
+if (allBtn) {
+    allBtn.addEventListener('click', function () {
+        menu.forEach(el => show(el))
+    })
+}
 
 //add event listeners to all of the buttons
 for (let i = 0; i < menuBtn.length; i++) {
@@ -63,9 +67,7 @@ for (let i = 0; i < menuBtn.length; i++) {
     });
 }
 
-allBtn.addEventListener('click', function () {
-    menu.forEach(el => show(el))
-})
+
 
 // show TOP button on scroll
 let topBtn = document.querySelector('.top-button')
@@ -84,12 +86,23 @@ let activeBtn = document.querySelector('.active-button');
 let menuBtns = document.querySelectorAll('.menu-btn');
 
 menuBtns.forEach(btn => {
-    btn.addEventListener('click', function(e){
+    btn.addEventListener('click', function (e) {
         menuBtns.forEach(activeBtn => {
-            if(activeBtn !== e.currentTarget){
+            if (activeBtn !== e.currentTarget) {
                 activeBtn.classList.remove('active-button')
             }
         })
         e.currentTarget.classList.add('active-button')
     })
+})
+
+
+
+// preloader
+let preload = document.querySelector('.preload')
+
+window.addEventListener('load', function () {
+    setTimeout(() => {
+        preload.classList.add('preload-hide')
+    }, 2000)
 })
