@@ -1,113 +1,3 @@
-.preload{
-  position: fixed;
-  z-index: 20;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-}
-
-.preload-hide{
-  z-index: -100;
-  visibility: hidden;
-}
-
-.menu-img {
-  cursor: pointer;
-  transition: 0.3s;
-}
-.menu-img:hover {
-  filter: brightness(70%);
-}
-
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 10; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.9);
-}
-
-.modal-content.img  {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  border-radius: 0;
-}
-
-.caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #fff;
-  font-size: 1.5em;
-  margin-top: 20px;
-}
-
-.modal-content, .caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.active {
-  border-bottom: 2px solid #d14200;
-}
-
-
-  /* ========== Top button ==========*/
-
-  .top {
-    width: 35px;
-    height: 35px;
-    background-color: #d14200;
-    border: none;
-    color: #ffffff;
-    letter-spacing: 2px;
-    border-radius: 100%;
-    transform: rotate(90deg);
-    cursor: pointer;
-  }
-  
-  .top-button{
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-
-  }
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap");
 body {
   background-color: #0f0f0f;
@@ -130,12 +20,12 @@ body {
   margin: 0 auto;
 }
 
-.hero-img {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url("../images/bg.jpg");
-  height: 100vh;
+.active {
+  border-bottom: 2px solid #d14200;
+}
+
+.hidden {
+  display: none;
 }
 
 p,
@@ -146,6 +36,44 @@ a {
   text-decoration: none;
 }
 
+.btn{
+  background-color: #d84400;
+  color: #ffffff;
+  align-self: center;
+  font-weight: 400;
+  border-radius: 50px;
+  border: none;
+  transition: transform 300ms;
+  font-family: "Montserrat", sans-serif;
+
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #d14200;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ========== Preloader ==========*/
+.preload {
+  position: fixed;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.preload-hide {
+  z-index: -100;
+  visibility: hidden;
+}
+
+/* ========== Header ==========*/
 header {
   height: 50px;
   display: flex;
@@ -158,20 +86,11 @@ header {
   z-index: 10;
 }
 
-
-header.menu-page{
-  position: static
-}
-
 .logo img {
   width: 110px;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
-nav ul {
+.navigation {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -188,9 +107,17 @@ li a {
   border-bottom: 1px solid transparent;
 }
 
-nav li a:hover,
-main p a {
+.navigation li a:hover{
   border-bottom: 2px solid #d14200;
+}
+
+/* ========== Main (landing page) ==========*/
+.main-hero-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/bg.jpg");
+  height: 100vh;
 }
 
 main {
@@ -214,146 +141,9 @@ main p {
   line-height: 20px;
   max-width: 600px;
   min-width: 200px;
-  backdrop-filter:brightness(60%);
+  backdrop-filter: brightness(60%);
 }
 
-/* ========== Map ==========*/
-
-iframe {
-  border: none;
-}
-
-.map {
-  margin: 20px 0;
-}
-
-.hidden {
-  display: none;
-}
-
-/* ========== Contact Us ==========*/
-
-.contact-container {
-  display: flex;
-  margin: 50px auto;
-  background-color: #f7f7f7;
-  box-sizing: border-box;
-  color: #0f0f0f;
-}
-
-.contact-container form,
-.contact-info {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 50px;
-}
-
-.contact-info {
-  background-color: #0c0c0c;
-  color: #f1f1f1;
-  gap: 100px;
-  justify-content: flex-start;
-  position: relative;
-}
-
-.contact-info::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/contact-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  filter: brightness(40%);
-}
-
-.contact-info p {
-  z-index: 10;
-  color: #f1f1f1;
-}
-
-.contact-info p:first-of-type {
-  font-weight: 600;
-  font-size: 1.3em;
-}
-
-.contact-container form {
-  gap: 20px;
-  position: relative;
-}
-
-.contact-container form div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contact-container form p {
-  font-weight: 600;
-  font-size: 1.3em;
-  color: #0f0f0f;
-}
-
-.contact-container form label {
-  font-size: 0.7em;
-  font-weight: 600;
-  color: #5a5a5a;
-}
-
-.contact-container textarea,
-.contact-container form input {
-  border: none;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px #c4c4c49c;
-  padding: 15px;
-  font-family: sans-serif;
-}
-
-.contact-container #send {
-  background-color: #d84400;
-  color: #ffffff;
-  align-self: center;
-  padding: 13px 50px;
-  align-self: flex-end;
-  font-weight: 400;
-  letter-spacing: 2px;
-  border-radius: 50px;
-}
-
-.contact-container #send:hover {
-  cursor: pointer;
-  background-color: #d14200;
-}
-
-.contact-container #send:active {
-  transform: scale(0.98);
-}
-
-.contact-container input:focus,
-.contact-container textarea:focus {
-  outline-color: #c7c7c7;
-}
-
-.mail-btn {
-  font-size: 1.2em;
-  text-transform: capitalize;
-  padding: 10px;
-  border: 2px solid transparent;
-  transition-duration: 500ms;
-}
-
-.mail-btn:hover {
-  border: 2px solid #ffffff;
-}
-
-/* ========== Reservation ==========*/
-
-/* on main page */
 .reservation-btn {
   text-decoration: none;
   color: #ffffff;
@@ -373,8 +163,19 @@ iframe {
   transform: scale(0.98);
 }
 
-/* on reservation page */
+.mail-btn {
+  font-size: 1.2em;
+  text-transform: capitalize;
+  padding: 10px;
+  border: 2px solid transparent;
+  transition-duration: 500ms;
+}
 
+.mail-btn:hover {
+  border: 2px solid #ffffff;
+}
+
+/* ========== Reservation (page) ==========*/
 .reservation-hero-img {
   background-image: url("../images/bg2.jpg");
   background-position: center;
@@ -394,7 +195,7 @@ iframe {
 .reservation-text {
   flex: 50%;
   align-self: center;
-  padding:0 20px;
+  padding: 0 20px;
 }
 .reservation-text h2 {
   font-size: 2.5em;
@@ -410,14 +211,14 @@ iframe {
   flex: 50%;
   display: grid;
   gap: 20px;
-  grid-template: repeat(5, 1fr) 45px / repeat(2,minmax(70px, 1fr));
+  grid-template: repeat(5, 1fr) 45px / repeat(2, minmax(70px, 1fr));
   grid-template-areas:
     "name name"
     "phone phone"
     "email email"
     "time date"
     "person person"
-    "submit submit";
+    "send send";
 
   background-color: #0c0c0c88;
   padding: 50px;
@@ -459,26 +260,10 @@ iframe {
 .reservation-person {
   grid-area: person;
 }
-#submit {
-  grid-area: submit;
-  background-color: #d84400;
-  border: none;
-  color: #ffffff;
+#send {
+  grid-area: send;
   font-size: 1em;
-  border: 2px solid transparent;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  border-radius: 5px;
-  border-radius: 50px;
-}
-
-#submit:hover {
-  background-color: #d14200;
-}
-
-#submit:active {
-  transform: scale(0.98);
+  padding: 10px;
 }
 
 /* ========== About Us ==========*/
@@ -565,15 +350,112 @@ iframe {
 
 /* ========== Menu ==========*/
 
-  /* menu filter */
+/* _______ Top button ______*/
+.top {
+  width: 35px;
+  height: 35px;
+  background-color: #d14200;
+  border: none;
+  color: #ffffff;
+  letter-spacing: 2px;
+  border-radius: 100%;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
 
-  .active-button, .menu-btn:hover{
-   background-color: #fff;
-   color: #0c0c0c;
+.top-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
 
+/* _______ Modal Image _______*/
+.menu-img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.menu-img:hover {
+  filter: brightness(70%);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content.img {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 0;
+}
+
+.caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.modal-content,
+.caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
   }
+  to {
+    transform: scale(1);
+  }
+}
 
-.menu-btns{
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* _______ Cards _______*/
+
+header.menu-page {
+  position: static;
+}
+
+.active-button,
+.menu-btn:hover {
+  background-color: #fff;
+  color: #0c0c0c;
+}
+
+.menu-btns {
   display: flex;
   justify-content: space-between;
   background-color: #d84400;
@@ -584,7 +466,7 @@ iframe {
   overflow: hidden;
 }
 
-.menu-btn{
+.menu-btn {
   padding: 15px 0;
   width: 150px;
   min-width: max-content;
@@ -650,15 +532,115 @@ iframe {
   font-size: 1.3em;
 }
 
-/* ========== Footer ==========*/
+/* ========== Contact Us ==========*/
+.contact-container {
+  display: flex;
+  margin: 50px auto;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  color: #0f0f0f;
+}
 
+.contact-container form,
+.contact-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.contact-info {
+  background-color: #0c0c0c;
+  color: #f1f1f1;
+  gap: 100px;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.contact-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/contact-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: brightness(40%);
+}
+
+.contact-info p {
+  z-index: 2;
+  color: #f1f1f1;
+}
+
+.contact-info p:first-of-type {
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.contact-container form {
+  gap: 20px;
+  position: relative;
+}
+
+.contact-container form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-container form p {
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #0f0f0f;
+}
+
+.contact-container form label {
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #5a5a5a;
+}
+
+.contact-container textarea,
+.contact-container form input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #c4c4c49c;
+  padding: 15px;
+  font-family: sans-serif;
+}
+
+.contact-container #send {
+  padding: 13px 50px;
+  align-self: flex-end;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  outline-color: #c7c7c7;
+}
+
+/* ========== Map ==========*/
+iframe {
+  border: none;
+}
+
+.map {
+  margin: 20px 0;
+}
+
+/* ========== Footer ==========*/
 footer {
   background-color: #0c0c0c;
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns:repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
   box-sizing: border-box;
   justify-items: center;
@@ -683,7 +665,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   gap: 30px;
 }
 
@@ -727,10 +708,10 @@ footer {
   line-height: 20px;
 }
 
-.footer-nav ul li,
-.footer-menu ul li,
-.footer-contact-info ul li,
-.footer-open-hours ul li {
+.footer-nav  li,
+.footer-menu  li,
+.footer-contact-info  li,
+.footer-open-hours  li {
   padding: 7px 0;
 }
 

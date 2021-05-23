@@ -1,4 +1,5 @@
 @media screen and (max-width: 950px) {
+  /* ========== Utils ==========*/
   .mobile {
     display: block;
   }
@@ -6,12 +7,13 @@
     display: none;
   }
 
-  header {
-    position: static;
+  /* ========== Preloader ==========*/
+  .preload img {
+    width: 200px;
   }
-
-  /* mobile navigation */
-  .burger-menu-icon {
+  
+  /* ========== Mob Nav ==========*/
+  .burger-button img {
     width: 30px;
   }
 
@@ -35,6 +37,11 @@
     text-align: center;
   }
 
+  .mobile-nav .navigation a {
+    color: #ffffff;
+    font-size: 1.7em;
+  }
+
   .exit-button {
     display: none;
     position: absolute;
@@ -44,24 +51,7 @@
     z-index: 6;
   }
 
-  .mobile-nav .navigation a {
-    color: #ffffff;
-    font-size: 1.7em;
-  }
-
-  /* contact form */
-  .contact-container {
-    flex-direction: column;
-    width: 70%;
-  }
-
-  .contact-container form,
-  .contact-info {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* chef */
+  /* ========== About us ==========*/
   .chef-container div {
     display: flex;
     flex-direction: column;
@@ -82,7 +72,19 @@
     width: 100%;
   }
 
+  /* ========== Contact ==========*/
+  .contact-container {
+    flex-direction: column;
+    width: 70%;
+  }
 
+  .contact-container form,
+  .contact-info {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ========== Footer ==========*/
   .footer-container {
     grid-template: repeat(2, 1fr) 20px / repeat(3, 1fr);
   }
@@ -97,13 +99,7 @@
 }
 
 @media (max-width: 620px) {
-  /* contact form */
-  .contact-container {
-    margin: 80px 0;
-    width: 100%;
-    border-radius: 0;
-  }
-
+  /* ========== Reservation ==========*/
   .reservation-container .container {
     flex-direction: column;
     padding: 0;
@@ -114,9 +110,37 @@
     margin-bottom: 50px;
     flex: 100%;
   }
+
+  /* ========== Contact ==========*/
+  .contact-container {
+    margin: 80px 0;
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 @media (max-width: 420px) {
+  /* ========== Reservation ==========*/
+  .reservation-container form {
+    flex: 50%;
+    display: grid;
+    gap: 20px;
+    grid-template: repeat(6, 1fr) 50px / repeat(2, minmax(70px, 1fr));
+    grid-template-areas:
+      "name name"
+      "phone phone"
+      "email email"
+      "time time"
+      "date date"
+      "person person"
+      "send send";
+
+    background-color: #0c0c0c88;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+
+  /* ========== Menu ==========*/
   .menu-cards {
     display: flex;
     flex-direction: column;
@@ -129,7 +153,7 @@
     gap: 15px;
   }
 
-  .menu-card img{
+  .menu-card img {
     border-radius: 5px;
   }
 
@@ -140,11 +164,7 @@
     word-wrap: break-word;
   }
 
-  .chef-container {
-    display: flex;
-    flex-direction: column;
-  }
-
+  /* ========== About Us ==========*/
   .about-us-content {
     padding: 20px;
   }
@@ -153,6 +173,12 @@
     overflow: auto;
   }
 
+  .chef-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ========== Footer ==========*/
   .footer-container {
     grid-template: 220px 230px 150px 20px / repeat(2, 1fr);
   }
@@ -169,24 +195,5 @@
   .footer-contact-info {
     grid-column: 2/3;
     grid-row: 2/3;
-  }
-
-  .reservation-container form {
-    flex: 50%;
-    display: grid;
-    gap: 20px;
-    grid-template: repeat(6, 1fr) 50px / repeat(2, minmax(70px, 1fr));
-    grid-template-areas:
-      "name name"
-      "phone phone"
-      "email email"
-      "time time"
-      "date date"
-      "person person"
-      "submit submit";
-
-    background-color: #0c0c0c88;
-    padding: 50px;
-    box-sizing: border-box;
   }
 }

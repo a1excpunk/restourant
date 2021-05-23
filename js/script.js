@@ -22,62 +22,59 @@ menuCloseBtn.addEventListener('click', function () {
 })
 
 // Menu modal
-let mealCard = document.querySelectorAll('.meal');
-let img = document.querySelectorAll('.menu-img');
+let dishCard = document.querySelectorAll('.dish');
+let menuImg = document.querySelectorAll('.menu-img');
 let captionText = document.querySelectorAll(".caption");
 let menuCard = document.querySelectorAll(".menu-card");
 let imageId = document.querySelectorAll('.img');
 let closeBtn = document.querySelectorAll('.close');
 
-for (let i = 0; i < img.length; i++) {
+for (let i = 0; i < menuImg.length; i++) {
     let captionSrc = menuCard[i].childNodes;
-    img[i].addEventListener('click', function () {
-        mealCard[i].style.display = "block";
+    menuImg[i].addEventListener('click', function () {
+        dishCard[i].style.display = "block";
         imageId[i].src = this.src;
         captionText[i].innerHTML = captionSrc[3].textContent;
     })
     closeBtn[i].addEventListener('click', function () {
-        mealCard[i].style.display = "none"
+        dishCard[i].style.display = "none"
     })
 }
 
 
 // Menu toggle
-let menu = document.querySelectorAll('.menu-container');
+let menuContainer = document.querySelectorAll('.menu-container');
 let menuBtn = document.querySelectorAll('.menu-button');
-
 let allBtn = getById('all');
+
 if (allBtn) {
     allBtn.addEventListener('click', function () {
-        menu.forEach(el => show(el))
+        menuContainer.forEach(el => show(el))
     })
 }
 
-//add event listeners to all of the buttons
 for (let i = 0; i < menuBtn.length; i++) {
     menuBtn.item(i).addEventListener("click", function () {
-        //save the id of the button that was clicked
         let clickedButtonId = this.id;
-        //hide all the tabs on the screen 
-        for (let x = 0; x < menu.length; x++) {
-            hide(menu.item(x));
+        for (let x = 0; x < menuContainer.length; x++) {
+            hide(menuContainer.item(x));
         }
-        //show only the one that corresponds to the id that we clicked
         show(getById(clickedButtonId + '-menu'));
     });
 }
-
 
 
 // show TOP button on scroll
 let topBtn = document.querySelector('.top-button')
 
 window.addEventListener('scroll', function () {
-    if (document.documentElement.scrollTop > 100) {
-        topBtn.classList.remove('hidden')
-    }
-    if (document.documentElement.scrollTop === 0) {
-        topBtn.classList.add('hidden')
+    if(topBtn){
+        if (document.documentElement.scrollTop > 100) {
+            topBtn.classList.remove('hidden')
+        }
+        if (document.documentElement.scrollTop === 0) {
+            topBtn.classList.add('hidden')
+        }
     }
 })
 
@@ -96,13 +93,11 @@ menuBtns.forEach(btn => {
     })
 })
 
-
-
 // preloader
 let preload = document.querySelector('.preload')
 
 window.addEventListener('load', function () {
     setTimeout(() => {
         preload.classList.add('preload-hide')
-    }, 2000)
+    }, 1500)
 })
