@@ -68,7 +68,7 @@ for (let i = 0; i < menuBtn.length; i++) {
 let topBtn = document.querySelector('.top-button')
 
 window.addEventListener('scroll', function () {
-    if(topBtn){
+    if (topBtn) {
         if (document.documentElement.scrollTop > 100) {
             topBtn.classList.remove('hidden')
         }
@@ -97,7 +97,7 @@ menuBtns.forEach(btn => {
 let preload = document.querySelector('.preload')
 
 window.addEventListener('load', function () {
-    setTimeout(() => {
-        preload.classList.add('preload-hide')
-    }, 1500)
+    // setTimeout(() => {
+    preload.classList.add('preload-hide')
+    // }, 1500)
 })

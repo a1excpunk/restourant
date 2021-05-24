@@ -15,6 +15,7 @@
   /* ========== Mob Nav ==========*/
   .burger-button img {
     width: 30px;
+    cursor: pointer;
   }
 
   .mobile-nav {
@@ -47,8 +48,9 @@
     position: absolute;
     top: 30px;
     right: 30px;
-    font-size: 2em;
+    font-size: 3em;
     z-index: 6;
+    cursor: pointer;
   }
 
   /* ========== About us ==========*/
