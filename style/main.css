@@ -644,7 +644,7 @@ footer {
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   box-sizing: border-box;
   justify-items: center;
@@ -655,14 +655,13 @@ footer {
 
 .footer-container > p {
   grid-column: 1/-1;
-  grid-row: 2/3;
+  grid-row: 3/4;
   padding: 20px 0;
   font-size: 0.7em;
   justify-content: flex-start;
 }
 
 .footer-nav,
-.footer-menu,
 .footer-icons,
 .footer-contact-info,
 .footer-open-hours {
@@ -713,7 +712,6 @@ footer {
 }
 
 .footer-nav  li,
-.footer-menu  li,
 .footer-contact-info  li,
 .footer-open-hours  li {
   padding: 7px 0;
@@ -723,7 +721,6 @@ footer {
   font-size: 0.8em;
 }
 
-.footer-menu a:hover,
 .footer-nav a:hover {
   color: #d84400;
 }
