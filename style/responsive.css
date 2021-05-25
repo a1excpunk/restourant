@@ -89,11 +89,16 @@
   /* ========== Footer ==========*/
   .footer-container {
     grid-template-rows: repeat(2, 1fr) 20px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-container > p {
     grid-row: 3/4;
+  }
+
+  .footer-contact-info{
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
 
   .footer-icons {
@@ -193,7 +198,7 @@
 
   /* ========== Footer ==========*/
   .footer-container {
-    grid-template-rows: 200px 250px 100px 200px 50px;
+    grid-template-rows: 200px 250px 200px 100px 50px;
     grid-template-columns: 1fr;
   }
 
@@ -201,8 +206,13 @@
     grid-row: -1/-2;
   }
 
+  .footer-contact-info{
+    grid-row: 3/4;
+  }
+
   .footer-icons {
     grid-column: 1/2;
+    grid-row: -2/-3;
   }
 
 }

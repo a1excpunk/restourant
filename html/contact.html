@@ -67,15 +67,15 @@
                 <p>Contact Us</p>
                 <div>
                     <label for="fullName">Full Name</label>
-                    <input type="text" name="fullName" placeholder="Your Name" id="fullName">
+                    <input type="text" name="fullName" placeholder="Your Name" id="fullName" required minlength="2">
                 </div>
                 <div>
                     <label for="mail">E-mail</label>
-                    <input type="email" name="email" id="mail" placeholder="Your E-mail">
+                    <input type="email" name="email" id="mail" placeholder="Your E-mail" required >
                 </div>
                 <div>
                     <label for="textArea">Your Message</label>
-                    <textarea name="text" id="textArea" cols="30" rows="10"></textarea>
+                    <textarea name="text" id="textArea" cols="30" rows="10" minlength="5" required></textarea>
                 </div>
                 <button type="submit"id="send" class="btn">Send</button>
             </form>
