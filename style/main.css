@@ -340,18 +340,12 @@ main p {
   display: flex;
   max-width: 450px;
   background-color: #0c0c0c;
-  box-shadow: 8px 8px 10px 0 #0c0c0caf;
-  transition: all 500ms ease-in-out;
+  box-shadow: 7px 7px 8px #0c0c0ce8;
+  transition: all 600ms ease-in-out;
 }
 
 .chef-container div:hover{
-  transform: translateX(5px) translateY(5px);
-  box-shadow: 5px 5px 8px #0c0c0c;
-}
-
-.chef-container div:nth-of-type(3),
-.chef-container div:nth-of-type(4) {
-  flex-direction: row-reverse;
+  transform: scale(1.03);
 }
 
 .chef-container p {
